@@ -1,6 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic);
-$itemGrow: 1.2;
-$duration: 250ms;
 
 
 *{
@@ -78,15 +76,9 @@ $duration: 250ms;
 {
 	float: right;
 	text-align: left;
-	font-size: 20px;
-	
+	font-size: 20px;	
 	background-color: #00CDCD;
-	
-  	
-	
 }
-
-
 #nav-bar ul li a:hover
 {
 	color:#007bff!important;
@@ -95,8 +87,6 @@ $duration: 250ms;
 .navbar
 {
 	background-color: #00CDCD;
-	margin-bottom: 20px;
-	
 }
 
 .navbar-toggler
@@ -112,35 +102,19 @@ $duration: 250ms;
 	font-size:16px;
 }
 
-
 #Slider
 {
-	
 	width: auto;
 	height: 240px;;
 }
 
-
-
-/*-----product images------*/
-.featured-categories
-{
-	margin: 50px 0;
-	
+#homeimage{
+	max-width: 1200px;
+	margin:0 auto;
 }
 
-.featured-categories img
-{
-	width: 100%;
-	padding: 20px 0;
-	transition: 1s;
-	cursor: pointer;
-	height: 240px;
-}
-
-.featured-categories img:hover
-{
-	transform: scale(1.1)
+.carousel-item{
+	background-color: #555;
 }
 
 /*---on sale---*/
@@ -180,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #site {
 	max-width: 960px;
-	margin: 0 auto;
+	margin: 50px auto;
 	padding: 0 1em;
 }
 
@@ -191,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
 .product-top img
 {
 	width: 100%;
-	height: 300px;
+	height: 200px;
 }
 .overlay-right
 {
@@ -383,41 +357,15 @@ form input.qty {
 #about
 {
 	padding-top: 50px;
-	padding-bottom: 50px;
 	color:#555;
-}
-
-
-#about .btn
-{
-	margin-top:20px;
-	margin-bottom:30px;
-	
 }
 
 .about-content
 {
 	padding-top: 20px;
+	width:200%;
 }
-
-.skills-bar p
-{
-	margin-bottom:6px;
-	font-weight: 600;
-}
-
-.progress-bar
-{
-	border-radius:16px;
-}
-
-.progress
-{
-	border-radius:16px!important;
-	margin-bottom: 20px;
 	
-}
-
 #services
 {
 	background: black;
@@ -427,6 +375,7 @@ form input.qty {
 	background-attachment: fixed;
 	padding-top:50px;
 	padding-bottom: 50px;
+	margin-top: 4em;
 }
 
 
@@ -591,7 +540,7 @@ h1::after
 
 .img-responsive
 {
-	height: 250px;
+	height: 220px;
 	width: 200px;
 	margin: 0px 50px;
 	
@@ -649,10 +598,11 @@ h1::after
 	width: 100%;
 	line-height: 3;
 	text-align: center;
-	background: #00CDCD;
-	position: absolute;
-	color: #fff;
+	background: #242526;
+	position: relative;
+	color:#f3f3f3;
 	left: 0;
+	right:0;
 	bottom: 0;
 }
 
@@ -688,7 +638,7 @@ body#checkout-page #site-info {
 
 .shopping-cart tr:nth-child(even) {
 	background: #fafafa;
-},
+}
 
 .shopping-cart td.pdelete {
 	text-align: center;
