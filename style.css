@@ -101,6 +101,9 @@
 	font-weight:600;
 	font-size:16px;
 }
+.nav-link{
+	transition: 0.5s;
+}
 
 #Slider
 {
@@ -122,12 +125,13 @@
 {
 	background: #00CDCD;
 	color: #fff;
-	width: 180px;
+	width: fit-content;
 	padding: 4px 10px;
 	height: 40px;
 	margin-bottom: 30px;
 	display: flex;
 	margin-top: 70px;
+	border-radius: 0.5em;
 }
 
 
@@ -166,39 +170,12 @@ h1, h2, h3, h4, h5, h6 {
 {
 	width: 100%;
 	height: 200px;
+	border-radius: 0.4em;
+	border: 1px solid #001b46a8;
+	max-width: 180px;
+	min-width: 140px;
 }
-.overlay-right
-{
-	display: block;
-	opacity: 0;
-	position: absolute;
-	top: 10%;
-	margin-left: 0;
-	width: 70px;
-	margin-bottom: 5%;
-	margin-top: 5%;
-	
-}
-.overlay-right .fa
-{
-	cursor: pointer;
-	background-color: #fff;
-	color: #000;
-	height: 35px;
-	width: 35px;
-	font-size: 20px;
-	padding: 7px;
-	margin-bottom: 5%;
-	margin-top: 10px;;
-	 
 
-}
-.overlay-right .btn-secondary
-{
-	background: none !important;
-	border: none !important;
-	box-shadow: none !important;
-}
 .product-top:hover .overlay-right
 {
 	opacity: 1;
@@ -209,26 +186,8 @@ h1, h2, h3, h4, h5, h6 {
 .product-bottom h3
 {
 	font-size: 28px;
-	padding-bottom: 10px; 
 }
 
-#masthead {
-	margin-top: 3em;
-	padding: 2em 0 0.5em 0;
-	border-bottom: 1px solid #ddd;
-}
-
-#masthead h1 {
-	margin: 0;
-	font-size: 3.5em;
-	overflow: hidden;
-	padding-left: 85px;
-	min-height: 82px;
-	line-height: 2.3;
-	
-	
-	
-}
 
 .tagline {
 	float: right;
@@ -262,8 +221,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-description {
-	
-	
 	color: black;
 	border-radius: 5px;
 }
@@ -273,46 +230,39 @@ h1, h2, h3, h4, h5, h6 {
 	color: black;
 	margin: 0;
 	font-size: 1.4em;
-	
-	
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
 
 .product-price {
-	width: 2.7em;
-	height: 2em;
-	font-size: 1.7em;
-	text-align: center;
-	margin-left: 90px;
-	background: #fff;
-	color: black;
-	
+    width: 2.5em;
+    height: 1.8em;
+    font-size: 1em;
+    margin-left: 80px;
+    background: #fff;
+    display: inline;
 }
 
 form.add-to-cart div
 {
 	text-align: center;
 	color: black;
-
-	
 	
 }
 
 form.add-to-cart p 
 {
 	text-align: center;
-	
 	color: #00CDCD;
 }
 
 form.add-to-cart p .btn
 {
 	text-align: center;
-	
 	color: white;
 	background: red;
 	margin-bottom: 40px;
+	font-size: small;
 }
 
 
@@ -327,11 +277,18 @@ form input.qty {
 	
 }
 
+.col-md-3{
+	max-width: 150px;
+	font-size:small;
+}
+#site h3{
+	margin:0.5em 0;
+	font-size: larger;
+}
 .btn{
 	display: inline-block;
 	background: #800;
 	color: white;
-	
 	padding: 0.3em 1em;
 	text-align: center;
 	border-radius: 4px;
@@ -562,6 +519,7 @@ h1::after
 .contact-form
 {
 	padding: 15px;
+	text-align: center;
 }
 
 ::placeholder
@@ -576,21 +534,10 @@ h1::after
 	margin: 15px;
 }
 
-.contact-info .fa
-{
-	margin: 10px;
-	color: #007bff;
-	font-weight: bold;
+.getintouch{
+	margin:0 auto 2em auto;
+	width:150%;
 }
-
-
-
-
-
-
-
-
-
 
 
 #site-info {
@@ -599,7 +546,7 @@ h1::after
 	line-height: 3;
 	text-align: center;
 	background: #242526;
-	position: relative;
+	position: absolute;
 	color:#f3f3f3;
 	left: 0;
 	right:0;
@@ -654,7 +601,7 @@ body#checkout-page #site-info {
 }
 
 #shopping-cart-actions {
-	margin: 1.5em 0;
+	margin: 2em 0 5em 0;
 	padding: 0;
 	list-style: none;
 	text-align: center;
@@ -785,10 +732,13 @@ body#checkout-page #site-info {
 	border-bottom: 1px solid #ddd;
 }
 
-#paypal-form {
-	margin: 1.5em 0;
+#submit-order:hover{
+	cursor: pointer;
 }
 
+#payment-btn:hover{
+	cursor: pointer;
+}
     
 
 

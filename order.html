@@ -11,16 +11,13 @@
 <body id="checkout-page">
 
 <div id="site">
-	<header id="masthead">
-		<h1></h1>
-	</header>
 	<div id="content">
 		<h1>Your Order</h1>
 			<table id="checkout-cart" class="shopping-cart">
 			  <thead>
 				<tr>
 					<th scope="col">Item</th>
-					<th scope="col">Qty</th>
+					<th scope="col">Quantity</th>
 					<th scope="col">Price</th>
 				</tr>
 			  </thead>
@@ -47,24 +44,19 @@
 		 
 		 
 		 
-<form id="paypal-form" action="" method="post">
-	<input type="hidden" name="cmd" value="_cart" />
-	<input type="hidden" name="upload" value="1" />
-	<input type="hidden" name="business" value="" />
-        
-	<input type="hidden" name="currency_code" value="" />
-	<input type="submit" id="paypal-btn" class="btn" value="Pay with PayPal" />
-</form>
-		 
-		 
+		<form id="payment-form" action="" method="post">
+			<input type="hidden" name="cmd" value="_cart" />
+			<input type="hidden" name="upload" value="1" />
+			<input type="hidden" name="business" value="" />
+				
+			<input type="hidden" name="currency_code" value="" />
+			<input type="submit" id="payment-btn" class="btn" value="Continue with Payment" />
+		</form>
 	</div>
-	
-	
-
 </div>
 
 <footer id="site-info">
-		Copyright &copy; 
+	Copyright &#169 2021. Kashish and Saishree
 	</footer>
 
 </body>

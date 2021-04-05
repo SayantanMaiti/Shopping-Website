@@ -6,16 +6,12 @@
 	
 	$.Shop.prototype = {
 		init: function() {
-		
 		    // Properties
-		
 			this.cartPrefix = "Furniture-"; // Prefix string to be prepended to the cart's name in the session storage
 			this.cartName = this.cartPrefix + "cart"; // Cart name in the session storage
 			this.shippingRates = this.cartPrefix + "shipping-rates"; // Shipping rates key in the session storage
 			this.total = this.cartPrefix + "total"; // Total key in the session storage
 			this.storage = sessionStorage; // shortcut to the sessionStorage object
-			
-			
 			this.$formAddToCart = this.$element.find( "form.add-to-cart" ); // Forms for adding items to the cart
 			this.$formCart = this.$element.find( "#shopping-cart" ); // Shopping cart form
 			this.$checkoutCart = this.$element.find( "#checkout-cart" ); // Checkout form cart
@@ -26,15 +22,10 @@
 			this.$updateCartBtn = this.$shoppingCartActions.find( "#update-cart" ); // Update cart button
 			this.$emptyCartBtn = this.$shoppingCartActions.find( "#empty-cart" ); // Empty cart button
 			this.$userDetails = this.$element.find( "#user-details-content" ); // Element that displays the user information
-			this.$paypalForm = this.$element.find( "#paypal-form" ); // PayPal form
 			
 			
-			this.currency = "&euro;"; // HTML entity of the currency to be displayed in the layout
-			this.currencyString = "€"; // Currency symbol as textual string
-			this.paypalCurrency = "EUR"; // PayPal's currency code
-			this.paypalBusinessEmail = "yourbusiness@email.com"; // Your Business PayPal's account email address
-			this.paypalURL = "https://www.sandbox.paypal.com/cgi-bin/webscr"; // The URL of the PayPal's form
-			
+			this.currency = "&#8377;"; // HTML entity of the currency to be displayed in the layout
+			this.currencyString = "₹"; // Currency symbol as textual string			
 			// Object containing patterns for form validation
 			this.requiredFields = {
 				expression: {
@@ -56,10 +47,8 @@
 			this.updateCart();
 			this.displayCart();
 			this.deleteProduct();
-			this.displayUserDetails();
-			this.populatePayPalForm();
-			
-			
+			this.displayUserDetails();			
+
 		},
 		
 		// Public methods
@@ -77,47 +66,7 @@
 				this.storage.setItem( this.total, "0" );
 			}
 		},
-		
-		// Appends the required hidden values to the PayPal's form before submitting
-		
-		populatePayPalForm: function() {
-			var self = this;
-			if( self.$paypalForm.length ) {
-				var $form = self.$paypalForm;
-				var cart = self._toJSONObject( self.storage.getItem( self.cartName ) );
-				var shipping = self.storage.getItem( self.shippingRates );
-				var numShipping = self._convertString( shipping );
-				var cartItems = cart.items; 
-				var singShipping = Math.floor( numShipping / cartItems.length );
-				
-				$form.attr( "action", self.paypalURL );
-				$form.find( "input[name='business']" ).val( self.paypalBusinessEmail );
-				$form.find( "input[name='currency_code']" ).val( self.paypalCurrency );
-				
-				for( var i = 0; i < cartItems.length; ++i ) {
-					var cartItem = cartItems[i];
-					var n = i + 1;
-					var name = cartItem.product;
-					var price = cartItem.price;
-					var qty = cartItem.qty;
-					
-					$( "<div/>" ).html( "<input type='hidden' name='quantity_" + n + "' value='" + qty + "'/>" ).
-					insertBefore( "#paypal-btn" );
-					$( "<div/>" ).html( "<input type='hidden' name='item_name_" + n + "' value='" + name + "'/>" ).
-					insertBefore( "#paypal-btn" );
-					$( "<div/>" ).html( "<input type='hidden' name='item_number_" + n + "' value='SKU " + name + "'/>" ).
-					insertBefore( "#paypal-btn" );
-					$( "<div/>" ).html( "<input type='hidden' name='amount_" + n + "' value='" + self._formatNumber( price, 2 ) + "'/>" ).
-					insertBefore( "#paypal-btn" );
-					$( "<div/>" ).html( "<input type='hidden' name='shipping_" + n + "' value='" + self._formatNumber( singShipping, 2 ) + "'/>" ).
-					insertBefore( "#paypal-btn" );
-					
-				}
-				
-				
-				
-			}
-		},
+	
 		
 		// Displays the user's information
 		
