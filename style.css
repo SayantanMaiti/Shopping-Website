@@ -11,16 +11,12 @@
 	position:sticky;
 	top: 0;
 	z-index: 10;
-	
-	
 }
 
 /* Add a black background color to the top navigation bar */
 .topnav 
 {
   	overflow: hidden;
-	
- 	
 }
 
 /* Style the links inside the navigation bar */
@@ -28,43 +24,28 @@
 {
   float: left;
   display: block;
-  color: black;
+  color: white;
   text-align: center;
-  padding: 26px 16px;
+  padding: 10px 15px;
   text-decoration: none;
   font-size: 17px;
-  
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the "active" element to highlight the current page */
-.topnav a.active {
-  background-color: #00CDCD;
-  
+	transition: 0.5s;
+  color: #aaaaaa;
+  text-decoration: none;
 }
 
 .navbarNav ul .li
 {
-	color: white;
 	background-color: black;
-}
-
-.topnav a 
-{
-  	background-color: white;
-	font-size: 20px;
-  
 }
 .navbar-brand img
 {
 	height:100px;
 	padding-left:0;
-	
 }
 
 .navbar-nav li
@@ -76,44 +57,38 @@
 {
 	float: right;
 	text-align: left;
-	font-size: 20px;	
-	background-color: #00CDCD;
+	background-color: #242526;
 }
 #nav-bar ul li a:hover
 {
-	color:#007bff!important;
+	color:#a8a8a8!important;
 }
 
 .navbar
 {
-	background-color: #00CDCD;
+	background-color: #242526;
 }
 
 .navbar-toggler
 {
 	border: none;
-	
 }
 
 .navbar-link
 {
-	color:#555!important;
+	color:white;
 	font-weight:600;
 	font-size:16px;
 }
 .nav-link{
 	transition: 0.5s;
+	color: white!important;
 }
 
 #Slider
 {
 	width: auto;
 	height: 240px;;
-}
-
-#homeimage{
-	max-width: 1200px;
-	margin:0 auto;
 }
 
 .carousel-item{
@@ -133,8 +108,6 @@
 	margin-top: 70px;
 	border-radius: 0.5em;
 }
-
-
 
 .title-box h2
 {
