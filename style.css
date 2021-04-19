@@ -285,7 +285,7 @@ form input.qty {
 .about-section {
 	padding: 50px;
 	text-align: center;
-	background-color: #474e5d;
+	background-color: #6a758d;
 	color: white;
   }
 
@@ -297,14 +297,13 @@ form input.qty {
 	
 #services
 {
-	background: black;
+	background-color: #404858;
 	background-size: cover;
 	background-position: center;
 	color:#555!important;
 	background-attachment: fixed;
 	padding-top:50px;
-	padding-bottom: 150px;
-	margin-top: 4em;
+	padding-bottom: 200px;
 }
 
 
@@ -384,7 +383,7 @@ form input.qty {
 h1::after
 {
 	content:'';
-	background: #007bff;
+	background: #ffffff;
 	display: block;
 	height: 3px;
 	width: 170px;
@@ -479,43 +478,10 @@ h1::after
 
 /*-------contact---------*/
 
-#contact
-{
-	background: #efefef;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	color: #777;
-
-}
-
-.contact-form
-{
-	padding: 15px;
-	text-align: center;
-}
-
-::placeholder
-{
-	color: #999!important;
-}
-
-.follow
-{
-	background: #fff;
-	padding: 10px;
-	margin: 15px;
-}
-
-.getintouch{
-	margin:0 auto 2em auto;
-	width:150%;
-}
 
 
-#site-info {
-	height: 3em;
+#footer-info {
 	width: 100%;
-	line-height: 3;
 	text-align: center;
 	background: #242526;
 	position: absolute;
@@ -523,6 +489,14 @@ h1::after
 	left: 0;
 	right:0;
 	bottom: 0;
+	padding-top: 20px;
+	line-height: 50%;
+	padding-bottom: 5px;
+}
+
+.copyright{
+	padding-top: 20px;
+	font-weight:600;
 }
 
 body#checkout-page #site-info {
